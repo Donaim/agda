@@ -1,4 +1,5 @@
 {-# LANGUAGE NondecreasingIndentation #-}
+{-# OPTIONS_GHC -O1 #-}
 
 module Agda.TypeChecking.Primitive.Cubical where
 

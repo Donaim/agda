@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -O1 #-}
 
 module Agda.TypeChecking.Quote where
 
