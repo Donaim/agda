@@ -80,9 +80,8 @@ CABAL_INSTALL_BIN_OPTS = --disable-library-profiling \
 CABAL_CONFIGURE_OPTS = $(SLOW_CABAL_INSTALL_OPTS) \
                        $(CABAL_INSTALL_BIN_OPTS)
 
-STACK_INSTALL_OPTS     = --flag Agda:enable-cluster-counting $(STACK_OPTS)
-STACK_INSTALL_BIN_OPTS = --test \
-                         --no-run-tests \
+STACK_INSTALL_OPTS     = --flag Agda:enable-cluster-counting --ghc-options="+RTS -ki1m -RTS -O3" $(STACK_OPTS)
+STACK_INSTALL_BIN_OPTS = --no-run-tests \
                          --no-library-profiling \
                          $(STACK_INSTALL_OPTS)
 
